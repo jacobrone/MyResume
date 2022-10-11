@@ -11,18 +11,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout
-    - uses: azure/login
+    - uses: actions/checkout@v2
+    - uses: azure/login@v2
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Upload to blob storage
-      uses: azure/CLI
+      uses: azure/CLI@v2
       with:
         inlineScript: |
             az storage blob upload-batch --account-name azuremyresumestorage --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint
-      uses: azure/CLI
+      uses: azure/CLI@v2
       with:
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "azuremyresume" --name "azuremyresume" --resource-group "azureresume-rg"

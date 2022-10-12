@@ -19,6 +19,7 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.33.1
         inlineScript: |
             az storage blob upload-batch --overwrite --account-name azuremyresumestorage --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint

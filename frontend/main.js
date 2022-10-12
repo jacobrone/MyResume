@@ -1,4 +1,4 @@
-window.addEventListener('DOMConentLoaded', (event) =>{
+window.addEventListener('DOMContentLoaded', (event) =>{
     getVisitCount();
 })
 
@@ -16,6 +16,6 @@ const getVisitCount = () => {
         document.getElementById("counter").innerText = count;
     }).catch(function(error){
         console.log(error);
-    })
+    });
     return count;
 }

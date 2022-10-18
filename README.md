@@ -36,6 +36,7 @@ This is my resume following the [ACG project video.]()
 - created the .github folder that contains the front and backend workflows for updates to the website files
 - created and added frontend workflow to automate content delivery and updates to the websites frontend
 
-### Remaining
-- implement unit testing
-- create and add the backend workflow to automate updates to the backend
+## Unit tests and backend worflow
+
+- implemented unit testing for the GetResumeCounter.cs function
+- added code to the backend workflow to automate updates to the backend
